@@ -3,29 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Mi CV Online</title>
+	<link rel="stylesheet" href="mystyle.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/c14ad426da.js" crossorigin="anonymous"></script>
     <!-- Agrega aquí tus enlaces a hojas de estilo (CSS) o scripts -->
 </head>
 <body>
     <header>
-        <h1>Mi Página Web</h1>
-        <!-- Aquí puedes agregar un menú de navegación si lo deseas -->
+<nav>
+<!-- 
+ <div>
+    <h3>Rolando Gonzalez</h3>
+  <small>Ingeniero Electrico y consultor</small>
+    </div>
+	-->
+  <ul>
+    <li data-text="Contacto">Contacto</li>
+    <li data-text="Tecnologias">Tecnologias</li>
+    <li data-text="Experiencia">Experiencia</li>
+    <li data-text="Formacion">Formacion</li>
+  </ul>
+  <div>
+    <span><i class="fa-solid fa-bars"></i></span>
+    <span class="ocultar"><i class="fa-regular fa-circle-xmark"></i></span>
+  </div>
+</nav>
     </header>
-
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+	  <symbol id="svgLinkedin" viewBox="0 0 448 512">
+		<path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+	  </symbol>
+	  <symbol id="svgEnveloped" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+	  <symbol id="svgWhatsapp" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></symbol>
+	</svg>
     <main>
-        <section>
-            <h2>Sección 1</h2>
+        <section class="contactos">
+			<div></div>
+			<div>
+			<ul>
+				<li><svg><use href="#svgWhatsapp"></use></svg><span>7777-7777</span></li>
+				<li><svg><use href="#svgEnveloped"></use></svg><span>micorreo@correo.com</span></li>
+				<li><svg><use href="#svgLinkedin"></use></svg><span>linkedin/rolando</span></li>
+			</ul>
+			</div>
+        </section>
+
+        <section class="servicios">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading">
+                    <h3 class="text-secondary mb-0">Servicios</h3>
+                    <h2 class="mb-5">Mis areas de trabajo son</h2>
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3">
+						<i class="fa-solid fa-bolt-lightning"></i>
+						</span>
+                        <h4><strong>Electricidad</strong></h4>
+                        <p class="text-faded mb-0">Looks great on any screen size!</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3">
+						<i class="fa-solid fa-chalkboard-user"></i>
+						</span>
+                        <h4><strong>Docencia y formacion</strong></h4>
+                        <p class="text-faded mb-0">Freshly redesigned for Bootstrap 5.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3">
+						<i class="fa-solid fa-code"></i>
+						</span>
+                        <h4><strong>Desarrollo web</strong></h4>
+                        <p class="text-faded mb-0">
+                            Millions of users
+                            <i class="fas fa-heart"></i>
+                            Start Bootstrap!
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="service-icon rounded-circle mx-auto mb-3">
+						<i class="fa-solid fa-sitemap"></i>
+						</span>
+                        <h4><strong>Administrador de plataforma</strong></h4>
+                        <p class="text-faded mb-0">I mustache you a question...</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="skill">
+            <h2>Skill</h2>
             <p>Contenido de la primera sección.</p>
         </section>
 
-        <section>
-            <h2>Sección 2</h2>
-            <p>Contenido de la segunda sección.</p>
+        <section class="experiencia">
+            <h2>Experiencia</h2>
+            <p>Contenido de la primera sección.</p>
+        </section>
+
+        <section class="certificados">
+            <h2>Estudios y certificados</h2>
+            <p>Contenido de la primera sección.</p>
         </section>
     </main>
 
     <footer>
         <p>© 2024 Mi Página Web</p>
     </footer>
+	
+    <script src="myscrypt.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

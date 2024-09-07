@@ -1,0 +1,180 @@
+h2{
+	color: red;
+}
+body{
+  overflow: hidden;
+  background:black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav{
+  height:48px;
+}
+h3, small{color:white;}
+.fa-bars  {
+  font-size: 48px;
+  color: LightBlue;
+  cursor: pointer;
+}
+
+.fa-circle-xmark {
+  font-size: 48px;
+  color: LightPink;
+  cursor: pointer;
+}
+
+nav div {
+  position:relative;
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul{
+  height:100vh;
+  width:100vw;
+  position: absolute;
+  z-index:10;
+  left:100%;
+  background: black;
+  color:white;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction:column;
+  transition: all 1s;
+}
+li{
+  font-size: 3em;
+  cursor: pointer;
+}
+li::before {
+  content: attr(data-text);
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  z-index: 0;
+  pointer-events: none; 
+  display:none;
+}
+ul li:nth-child(1):hover {
+  color: #FFB6C1;
+}
+ul li:nth-child(1):hover:before {
+  color: rgba(255, 182, 193, 0.2);
+}
+
+ul li:nth-child(2):hover {
+  color: #AEC6CF;
+}
+ul li:nth-child(2):hover:before {
+  color: rgba(174, 198, 207, 0.2);
+}
+ul li:nth-child(3):hover {
+  color: #77DD77;
+}
+ul li:nth-child(3):hover:before {
+  color: rgba(119, 221, 119, 0.2);
+}
+ul li:nth-child(4):hover {
+  color: #FDFD96;
+}
+ul li:nth-child(4):hover:before {
+  color: rgba(253, 253, 150, 0.2);
+}
+
+nav ul li:hover::before {
+  display: inline;
+  animation-name: elzoom;
+  animation-duration: 1s;
+}
+@keyframes impacto {
+  from {font-size: 12em;}
+  to {font-size: 5em;}
+}
+@keyframes elzoom {
+  from {letter-spacing: 2em;}
+  to {letter-spacing: normal;}
+}
+.open {
+  left:0%;
+}
+.ocultar{
+  display:none;
+}
+.contactos{
+	width:100vw;
+	height:100vh;
+	background: black;
+}
+.d-none{display:none;}
+section.contactos div:first-child{
+	
+  position:absolute;
+  z-index:0;
+  background: black;
+  width:100vw;
+  height:100vh;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 60%, black), url('https://mediosdeyuki.blob.core.windows.net/contenidosyuki/Imagen%20de%20WhatsApp%202024-08-20%20a%20las%2003.47.11_74366d7a.jpg?sp=r&st=2024-08-21T18:17:17Z&se=2024-10-01T02:17:17Z&spr=https&sv=2022-11-02&sr=b&sig=gWlP7dkyGY8tqlXb8AfS%2Ftvf2ElV9zSRzFY8y%2FSJcDc%3D');
+  background-size: 40% 100%;
+  background-position: -5vw center;
+ background-repeat: no-repeat;
+ filter: brightness(80%) contrast(90%);
+ 
+}
+section.contactos div:nth-child(2){
+  width:50%;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  float:right;
+  overflow:hidden;
+  
+}
+section.contactos ul{
+  color: white;
+  list-style-type: none;
+  position:relative;
+  animation-name: desplazar;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+section.contactos li{
+  display:flex;
+  align-items:center;
+  font-size: 3em;
+}
+section.contactos span{padding-left:10px;}
+section.contactos svg{
+  width:1em;
+  height:1em;
+  fill:white;
+}
+@keyframes desplazar {
+  0%   {opacity:0.0; top:100%;}
+  10%  {opacity:1.0; top:0%;}
+  100% {opacity:1.0; top:0%;}
+}
+
+.servicios{
+	width:100vw;
+	height:100vh;
+	background-color:blue;	
+}
+.skill{
+	background-color:DarkSlateGray;		
+}
+.experiencia{
+	background-color:MediumTurquoise;		
+}
+.certificados{
+	background-color:LightGray;		
+}
+footer{
+	background-color:MediumSeaGreen;		
+}
