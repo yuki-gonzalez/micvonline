@@ -226,9 +226,84 @@ section.servicios span{
   font-size: 4rem;
   color: Blue;
 }
+
 .skill{
-	background-color:DarkSlateGray;		
+	background-color:DarkSlateGray;
+	padding-top:2rem;		
 }
+.skill p{
+	color:white;
+	text-align:center;
+	margin:1rem;
+}
+.skill h4{
+	color:white;
+	text-align:center;
+	margin:1rem;
+}
+.skill h3{
+	color:white;
+	text-align:center;
+	margin:1rem;
+}
+.skill h2{
+	color:Azure;
+	text-align:center;
+	font-size: 3em;
+	margin:1rem;
+}
+.skill-scene{
+  background-color:DarkSlateGray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left:6%;
+  perspective: 900px;
+}
+.skill-scene div{
+  border-radius: 20px; 
+}
+.skill-card{
+  width: 240px;
+  height: 300px;
+  cursor: pointer;
+  flex: 1 1 calc(30% - 10px);
+  margin-top: 50px;
+  overflow:hidden;
+ }
+.card__flip{
+  width: 240px;
+  height: 300px;
+  
+  transition: 1s ease-in-out;
+  transform-style: preserve-3d;  
+}
+.skill-card:hover .card__flip{
+  transform: rotateY(0.5turn);
+}
+.card__face {
+  width: 100%;
+  height: 100%;
+  
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
+}
+.card__front, .card__back{
+  background:white;
+  
+}
+.skill-card h2{text-align:center;}
+.skill-card img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+}
+.card__back {
+  transform: rotateY(0.5turn);
+}
+
+
 .experiencia{
 	background-color:MediumTurquoise;		
 }
