@@ -1,8 +1,6 @@
-h2{
-	color: red;
-}
 body{
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   background:black;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -10,30 +8,46 @@ body{
 }
 
 nav{
-  height:48px;
+  background-color:black;
 }
-h3, small{color:white;}
+nav img{
+	width: 4rem;
+    aspect-ratio: 1 / 1;
+	margin-left:8rem;
+	margin-right:2rem;
+}
+nav div{
+	margin-left:1rem;
+}
+nav button{
+	background-color:black;
+	border:none;
+	margin-right:8rem;
+	width: 4rem;
+    aspect-ratio: 1 / 1;
+}
+nav h3, nav p, nav a{color:white;}
 .fa-bars  {
   font-size: 48px;
   color: LightBlue;
   cursor: pointer;
 }
-
 .fa-circle-xmark {
   font-size: 48px;
   color: LightPink;
   cursor: pointer;
 }
-
-nav div {
-  position:relative;
-  display: flex;
-  justify-content: flex-end;
+.ocultar{
+  display:none;
+}
+nav button{
+	z-index:20;
 }
 nav ul{
   height:100vh;
   width:100vw;
   position: absolute;
+  top:0;
   z-index:10;
   left:100%;
   background: black;
@@ -45,7 +59,11 @@ nav ul{
   align-items:center;
   justify-content: center;
   flex-direction:column;
-  transition: all 1s;
+  transition: all 0.7s;
+}
+.open {
+  visibility: visible;
+  left:0%;
 }
 li{
   font-size: 3em;
@@ -101,20 +119,14 @@ nav ul li:hover::before {
   from {letter-spacing: 2em;}
   to {letter-spacing: normal;}
 }
-.open {
-  left:0%;
-}
-.ocultar{
-  display:none;
-}
+
 .contactos{
 	width:100vw;
 	height:100vh;
 	background: black;
 }
 .d-none{display:none;}
-section.contactos div:first-child{
-	
+section.contactos div:first-child{	
   position:absolute;
   z-index:0;
   background: black;
@@ -125,7 +137,6 @@ section.contactos div:first-child{
   background-position: -5vw center;
  background-repeat: no-repeat;
  filter: brightness(80%) contrast(90%);
- 
 }
 section.contactos div:nth-child(2){
   width:50%;
@@ -164,7 +175,56 @@ section.contactos svg{
 .servicios{
 	width:100vw;
 	height:100vh;
-	background-color:blue;	
+	background-color:blue;
+	padding-top:2rem;
+}
+.servicios p{
+	color:white;
+	text-align:center;
+	margin:1rem;
+}
+.servicios h4{
+	color:white;
+	text-align:center;
+	margin:1rem;
+}
+.servicios h3{
+	color:white;
+	text-align:center;
+	margin:1rem;
+}
+.servicios h2{
+	color:Azure;
+	text-align:center;
+	font-size: 3em;
+	margin:1rem;
+}
+.servicios-flex{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+.servicios-card{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items: center;
+}
+section.servicios span{
+	background-color:white;
+	padding:1rem;
+	margin-top:2rem;
+	margin-bottom:2rem;
+	border-radius:50%;
+	width: 8rem;
+    aspect-ratio: 1 / 1;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+}
+.fa-bolt-lightning, .fa-chalkboard-user, .fa-code, .fa-sitemap  {
+  font-size: 4rem;
+  color: Blue;
 }
 .skill{
 	background-color:DarkSlateGray;		

@@ -12,24 +12,23 @@
 </head>
 <body>
     <header>
-<nav>
-<!-- 
- <div>
-    <h3>Rolando Gonzalez</h3>
-  <small>Ingeniero Electrico y consultor</small>
-    </div>
-	-->
-  <ul>
-    <li data-text="Contacto">Contacto</li>
-    <li data-text="Tecnologias">Tecnologias</li>
-    <li data-text="Experiencia">Experiencia</li>
-    <li data-text="Formacion">Formacion</li>
-  </ul>
-  <div>
-    <span><i class="fa-solid fa-bars"></i></span>
-    <span class="ocultar"><i class="fa-regular fa-circle-xmark"></i></span>
-  </div>
-</nav>
+        <nav class="navbar text-uppercase fixed-top" id="mainNav">
+			<img src="deno.png" alt="Descripción de la imagen" class="navbar-brand-img">
+            <div>
+				<h3>Rolando Gonzalez</h3>
+				<p>Ingeniero electrico y consultor</p>
+			</div>
+			  <ul>
+				<li data-text="Contacto">Contacto</li>
+				<li data-text="Tecnologias">Tecnologias</li>
+				<li data-text="Experiencia">Experiencia</li>
+				<li data-text="Formacion">Formacion</li>
+			  </ul>				
+			  <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span><i class="fa-solid fa-bars"></i></span>
+				<span class="ocultar"><i class="fa-regular fa-circle-xmark"></i></span>       
+				</button>
+        </nav>
     </header>
 	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
 	  <symbol id="svgLinkedin" viewBox="0 0 448 512">
@@ -53,26 +52,26 @@
         <section class="servicios">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading">
-                    <h3 class="text-secondary mb-0">Servicios</h3>
-                    <h2 class="mb-5">Mis areas de trabajo son</h2>
+                    <h3>Servicios</h3>
+                    <h2>Mis areas de trabajo son</h2>
                 </div>
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3">
+                <div class="servicios-flex">
+                    <div class="servicios-card">
+                        <span>
 						<i class="fa-solid fa-bolt-lightning"></i>
 						</span>
                         <h4><strong>Electricidad</strong></h4>
                         <p class="text-faded mb-0">Looks great on any screen size!</p>
                     </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3">
+                    <div class="servicios-card">
+                        <span>
 						<i class="fa-solid fa-chalkboard-user"></i>
 						</span>
                         <h4><strong>Docencia y formacion</strong></h4>
                         <p class="text-faded mb-0">Freshly redesigned for Bootstrap 5.</p>
                     </div>
-                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3">
+                    <div class="servicios-card">
+                        <span>
 						<i class="fa-solid fa-code"></i>
 						</span>
                         <h4><strong>Desarrollo web</strong></h4>
@@ -82,8 +81,8 @@
                             Start Bootstrap!
                         </p>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <span class="service-icon rounded-circle mx-auto mb-3">
+                    <div class="servicios-card">
+                        <span>
 						<i class="fa-solid fa-sitemap"></i>
 						</span>
                         <h4><strong>Administrador de plataforma</strong></h4>
