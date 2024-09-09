@@ -229,7 +229,8 @@ section.servicios span{
 
 .skill{
 	background-color:DarkSlateGray;
-	padding-top:2rem;		
+	padding-top:2rem;
+	padding-bottom:2rem;	
 }
 .skill p{
 	color:white;
@@ -237,12 +238,12 @@ section.servicios span{
 	margin:1rem;
 }
 .skill h4{
-	color:white;
+	color:MidnightBlue;
 	text-align:center;
 	margin:1rem;
 }
 .skill h3{
-	color:white;
+	color:MidnightBlue;
 	text-align:center;
 	margin:1rem;
 }
@@ -251,6 +252,10 @@ section.servicios span{
 	text-align:center;
 	font-size: 3em;
 	margin:1rem;
+}
+.skill li{
+	font-size:1rem;
+	list-style-type: none;
 }
 .skill-scene{
   background-color:DarkSlateGray;
@@ -305,10 +310,76 @@ section.servicios span{
 
 
 .experiencia{
-	background-color:MediumTurquoise;		
+	background-color:LightSteelBlue;		
+	padding-top:2rem;
+	padding-bottom:2rem;	
 }
+.experiencia p{
+	color:MidnightBlue;
+	text-align:center;
+	margin:1rem;
+}
+.experiencia h2{
+	color:MidnightBlue;
+	text-align:center;
+	font-size: 3em;
+	margin:1rem;
+}
+
+.acordeon {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.acordeon-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.acordeon-titulo {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    background: #f1f1f1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.acordeon-titulo:hover {
+    background: #ddd;
+}
+
+.acordeon-contenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: white;
+    padding: 0 15px;
+}
+
+.acordeon-contenido p {
+    margin: 15px 0;
+}
+
 .certificados{
 	background-color:LightGray;		
+	padding-top:2rem;
+}
+.certificados p{
+	color:white;
+	text-align:center;
+	margin:1rem;
+}
+.certificados h2{
+	color:Azure;
+	text-align:center;
+	font-size: 3em;
+	margin:1rem;
 }
 footer{
 	background-color:MediumSeaGreen;		
