@@ -105,6 +105,12 @@ ul li:nth-child(4):hover {
 ul li:nth-child(4):hover:before {
   color: rgba(253, 253, 150, 0.2);
 }
+ul li:nth-child(5):hover {
+  color: #ff5733;
+}
+ul li:nth-child(5):hover:before {
+  color: rgba(255, 87, 51, 0.2);
+}
 
 nav ul li:hover::before {
   display: inline;
@@ -369,17 +375,66 @@ section.servicios span{
 .certificados{
 	background-color:LightGray;		
 	padding-top:2rem;
+	padding-bottom:4rem;
+	padding-left:8rem;
+	padding-right:8rem;
 }
 .certificados p{
-	color:white;
+	color:DarkBlue;
 	text-align:center;
 	margin:1rem;
 }
 .certificados h2{
-	color:Azure;
+	color:DarkBlue;
 	text-align:center;
 	font-size: 3em;
 	margin:1rem;
+}
+.portfolio-item-content{
+	position:absolute;
+	border:20px solid red;
+}
+.certificados-flex{
+	display:flex;
+	justify-content: space-between;
+}
+.mimodal-card {
+	width: 16rem;
+    aspect-ratio: 3 / 2;	
+	overflow:hidden;
+}
+.mimodal-content{
+	position:absolute;
+	width: 16rem;
+    aspect-ratio: 3 / 2;
+	display:none;
+}
+.mimodal-card span{
+	width:40rem;
+	position:absolute;
+	padding-left:35rem;
+	padding-top:2rem;
+	display:none;
+}
+.mimodal-card:hover .mimodal-content{
+	background-color: rgba(0, 255, 255, 0.4);
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.zoom-card{
+	width: 40rem;
+}
+.zoom-card span{
+	display:inline;
+}
+.zoom-card img{
+	width: 40rem;
+    aspect-ratio: 3 / 2;	
+}
+.zoom-card:hover .mimodal-content{
+	display:none;
 }
 footer{
 	background-color:MediumSeaGreen;		
