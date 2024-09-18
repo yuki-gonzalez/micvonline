@@ -6,6 +6,9 @@ const liElements = navElement.querySelectorAll('li');
 const certificadosFlex = document.querySelector('.certificados-flex');
 const mimodalCards = certificadosFlex.querySelectorAll('.mimodal-card');
 
+const modalElements = document.querySelector('.mimodal-show');
+const modalBoton = modalElements.querySelector('button');
+
 spanElements.forEach(span => {
   span.addEventListener('click', () => {
     lista.classList.toggle('open');
@@ -17,9 +20,14 @@ spanElements.forEach(span => {
 
 mimodalCards.forEach(card => {
   card.addEventListener('click', () => {
-    card.classList.toggle('zoom-card');
+    modalElements.classList.toggle('abreCierra');
   });
 });
+/*
+modalBoton.addEventListener('click', () => {
+	modalElements.classList.toggle('abreCierra');
+});
+*/
 
 liElements.forEach((li, index) => {
   li.addEventListener('click', () => {
@@ -54,3 +62,24 @@ document.querySelectorAll('.acordeon-titulo').forEach(button => {
         }
     });
 });
+
+modalBoton.addEventListener('click', () => {
+	modalElements.classList.toggle('abreCierra');
+});
+
+// Cuando el usuario hace scroll hacia abajo 400px desde la parte superior de la página, muestra el botón
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        document.getElementById("goTopBtn").style.display = "block";
+    } else {
+        document.getElementById("goTopBtn").style.display = "none";
+    }
+}
+
+// Cuando el usuario hace clic en el botón, desplázate hacia la parte superior de la página
+function topFunction() {
+    document.body.scrollTop = 0; // Para Safari
+    document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+}

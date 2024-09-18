@@ -436,6 +436,69 @@ section.servicios span{
 .zoom-card:hover .mimodal-content{
 	display:none;
 }
+.mimodal-show{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background-color:grey;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding-top:6rem;
+}
+.mimodal-show div{
+	width: 50rem;
+    aspect-ratio: 3 / 2;	
+}
+.mimodal-show img {
+
+}
+.mimodal-show button{
+	position:absolute;
+	width:50rem;
+	left:0;
+	right:0;
+	margin:auto;
+	/*position:relative;
+	
+	right:0;
+	margin:auto;*/
+	
+}
+.abreCierra{
+	display:none;
+}
+/* Estilos para el botón */
+#goTopBtn {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    bottom: 20px; /* 20px desde el fondo */
+    right: 30px; /* 30px desde la derecha */
+    z-index: 99; /* Asegura que esté por encima de otros elementos */
+    font-size: 18px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno */
+    background-color: #00ba00; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cursor de puntero */
+    padding: 6px; /* Relleno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+#goTopBtn img{
+	width: 3rem;
+    aspect-ratio: 1 / 1;	
+}
+
+#goTopBtn:hover img{
+    width: 3.5rem;
+}
+
+
 footer{
-	background-color:MediumSeaGreen;		
+	background-color:MediumSeaGreen;
+	padding-top:3rem;
+	padding-bottom:3rem;
 }
