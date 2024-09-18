@@ -1,14 +1,27 @@
 body{
   overflow-y: auto;
   overflow-x: hidden;
-  background:black;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 nav{
   background-color:black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  padding: 10px;
+}
+nav div{
+	/*margin-left:1rem;*/
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	width:100vw;
+}
+nav div div{
+	display:flex;
+	flex-direction: column;
 }
 nav img{
 	width: 4rem;
@@ -16,15 +29,13 @@ nav img{
 	margin-left:8rem;
 	margin-right:2rem;
 }
-nav div{
-	margin-left:1rem;
-}
 nav button{
 	background-color:black;
 	border:none;
 	margin-right:8rem;
 	width: 4rem;
     aspect-ratio: 1 / 1;
+	z-index:20;
 }
 nav h3, nav p, nav a{color:white;}
 .fa-bars  {
@@ -40,9 +51,6 @@ nav h3, nav p, nav a{color:white;}
 .ocultar{
   display:none;
 }
-nav button{
-	z-index:20;
-}
 nav ul{
   height:100vh;
   width:100vw;
@@ -50,6 +58,7 @@ nav ul{
   top:0;
   z-index:10;
   left:100%;
+  opacity:0;
   background: black;
   color:white;
   list-style-type: none;
@@ -62,14 +71,16 @@ nav ul{
   transition: all 0.7s;
 }
 .open {
-  visibility: visible;
+  /*visibility: visible;*/
   left:0%;
+  opacity:1;
 }
-li{
+nav li{
   font-size: 3em;
   cursor: pointer;
 }
-li::before {
+
+nav li::before {
   content: attr(data-text);
   position: absolute;
   top:50%;
@@ -80,42 +91,41 @@ li::before {
   pointer-events: none; 
   display:none;
 }
-ul li:nth-child(1):hover {
-  color: #FFB6C1;
-}
-ul li:nth-child(1):hover:before {
-  color: rgba(255, 182, 193, 0.2);
-}
-
-ul li:nth-child(2):hover {
-  color: #AEC6CF;
-}
-ul li:nth-child(2):hover:before {
-  color: rgba(174, 198, 207, 0.2);
-}
-ul li:nth-child(3):hover {
-  color: #77DD77;
-}
-ul li:nth-child(3):hover:before {
-  color: rgba(119, 221, 119, 0.2);
-}
-ul li:nth-child(4):hover {
-  color: #FDFD96;
-}
-ul li:nth-child(4):hover:before {
-  color: rgba(253, 253, 150, 0.2);
-}
-ul li:nth-child(5):hover {
-  color: #ff5733;
-}
-ul li:nth-child(5):hover:before {
-  color: rgba(255, 87, 51, 0.2);
-}
-
-nav ul li:hover::before {
+nav li:hover::before {
   display: inline;
   animation-name: elzoom;
   animation-duration: 1s;
+}
+nav li:nth-child(1):hover {
+  color: #FFB6C1;
+}
+nav li:nth-child(1):hover:before {
+  color: rgba(255, 182, 193, 0.2);
+}
+
+nav li:nth-child(2):hover {
+  color: #AEC6CF;
+}
+nav li:nth-child(2):hover:before {
+  color: rgba(174, 198, 207, 0.2);
+}
+nav li:nth-child(3):hover {
+  color: #77DD77;
+}
+nav li:nth-child(3):hover:before {
+  color: rgba(119, 221, 119, 0.2);
+}
+nav li:nth-child(4):hover {
+  color: #FDFD96;
+}
+nav li:nth-child(4):hover:before {
+  color: rgba(253, 253, 150, 0.2);
+}
+nav li:nth-child(5):hover {
+  color: #ff5733;
+}
+nav li:nth-child(5):hover:before {
+  color: rgba(255, 87, 51, 0.2);
 }
 @keyframes impacto {
   from {font-size: 12em;}
@@ -138,20 +148,20 @@ section.contactos div:first-child{
   background: black;
   width:100vw;
   height:100vh;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 60%, black), url('https://mediosdeyuki.blob.core.windows.net/contenidosyuki/Imagen%20de%20WhatsApp%202024-08-20%20a%20las%2003.47.11_74366d7a.jpg?sp=r&st=2024-08-21T18:17:17Z&se=2024-10-01T02:17:17Z&spr=https&sv=2022-11-02&sr=b&sig=gWlP7dkyGY8tqlXb8AfS%2Ftvf2ElV9zSRzFY8y%2FSJcDc%3D');
-  background-size: 40% 100%;
-  background-position: -5vw center;
- background-repeat: no-repeat;
- filter: brightness(80%) contrast(90%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 1%, black 40%),  url('https://mediosdeyuki.blob.core.windows.net/contenidosyuki/Imagen%20de%20WhatsApp%202024-08-20%20a%20las%2003.47.11_74366d7a.jpg?sp=r&st=2024-08-21T18:17:17Z&se=2024-10-01T02:17:17Z&spr=https&sv=2022-11-02&sr=b&sig=gWlP7dkyGY8tqlXb8AfS%2Ftvf2ElV9zSRzFY8y%2FSJcDc%3D');
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+  filter: brightness(80%) contrast(90%);
 }
 section.contactos div:nth-child(2){
-  width:50%;
+  width:100vw;
   height:100vh;
   display:flex;
   align-items:center;
-  float:right;
+  justify-content:flex-end;
+  padding-right:5rem;
   overflow:hidden;
-  
 }
 section.contactos ul{
   color: white;
@@ -164,7 +174,7 @@ section.contactos ul{
 section.contactos li{
   display:flex;
   align-items:center;
-  font-size: 3em;
+  font-size: 2em;
 }
 section.contactos span{padding-left:10px;}
 section.contactos svg{
@@ -177,7 +187,6 @@ section.contactos svg{
   10%  {opacity:1.0; top:0%;}
   100% {opacity:1.0; top:0%;}
 }
-
 .servicios{
 	width:100vw;
 	height:100vh;
@@ -501,4 +510,33 @@ footer{
 	background-color:MediumSeaGreen;
 	padding-top:3rem;
 	padding-bottom:3rem;
+}
+
+@media (max-width: 768px) {
+	nav img{
+		/*
+		width: 4rem;
+		aspect-ratio: 1 / 1;
+		*/
+		margin-left:1rem;
+		margin-right:1px;
+	}
+	nav button{
+		margin-right:2rem;
+		/*
+		width: 4rem;
+		aspect-ratio: 1 / 1;
+		*/
+	}
+	nav ul{
+	  height:100vh;
+	  width:100vw;
+	}
+	nav ul li:hover::before {
+	  display: none;
+	}
+	section.contactos div:first-child{	
+	  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 1%, black 80%),  url('https://mediosdeyuki.blob.core.windows.net/contenidosyuki/Imagen%20de%20WhatsApp%202024-08-20%20a%20las%2003.47.11_74366d7a.jpg?sp=r&st=2024-08-21T18:17:17Z&se=2024-10-01T02:17:17Z&spr=https&sv=2022-11-02&sr=b&sig=gWlP7dkyGY8tqlXb8AfS%2Ftvf2ElV9zSRzFY8y%2FSJcDc%3D');
+	  background-position: center center;
+	}
 }
