@@ -198,10 +198,14 @@ section.contactos svg{
 	text-align:center;
 	margin:1rem;
 }
+.servicios li{
+	color: white;
+}
 .servicios h4{
 	color:white;
 	text-align:center;
 	margin:1rem;
+	height:3rem;
 }
 .servicios h3{
 	color:white;
@@ -539,4 +543,40 @@ footer{
 	  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 1%, black 80%),  url('https://mediosdeyuki.blob.core.windows.net/contenidosyuki/Imagen%20de%20WhatsApp%202024-08-20%20a%20las%2003.47.11_74366d7a.jpg?sp=r&st=2024-08-21T18:17:17Z&se=2024-10-01T02:17:17Z&spr=https&sv=2022-11-02&sr=b&sig=gWlP7dkyGY8tqlXb8AfS%2Ftvf2ElV9zSRzFY8y%2FSJcDc%3D');
 	  background-position: center center;
 	}
+.servicios{
+	padding-top:1rem;
+	height:auto;
+}
+.servicios h4{
+	margin:0.5rem;
+}
+.servicios h3{
+	margin:0.5rem;
+}
+.servicios h2{
+	font-size: 2em;
+	margin:0.5rem;
+}
+.servicios-flex{
+	flex-direction:column;
+}
+
+section.servicios span{
+	background-color:white;
+	padding:1rem;
+	margin-top:2rem;
+	margin-bottom:2rem;
+	border-radius:50%;
+	width: 8rem;
+    aspect-ratio: 1 / 1;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+}
+.fa-bolt-lightning, .fa-chalkboard-user, .fa-code, .fa-sitemap  {
+  font-size: 4rem;
+  color: Blue;
+}
+
+
 }
