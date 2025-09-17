@@ -3,6 +3,9 @@ const spanElements = navElement.querySelectorAll('span');
 const lista = navElement.querySelector('ul');
 const liElements = navElement.querySelectorAll('li');
 
+const acordeones_titulo = document.querySelectorAll('.acordeon-titulo')
+const acordeones_conten = document.querySelectorAll('.acordeon-contenido')
+
 const certificadosFlex = document.querySelector('.certificados-flex');
 const mimodalCards = certificadosFlex.querySelectorAll('.mimodal-card');
 
@@ -49,16 +52,22 @@ liElements.forEach((li, index) => {
   });
 });
 
-document.querySelectorAll('.acordeon-titulo').forEach(button => {
+acordeones_titulo.forEach((button,index) => {
     button.addEventListener('click', () => {
-        const acordeonContenido = button.nextElementSibling;
+        //const acordeonContenido = button.nextElementSibling;
 
-        button.classList.toggle('active');
+        
 
         if (button.classList.contains('active')) {
-            acordeonContenido.style.maxHeight = acordeonContenido.scrollHeight + 'px';
+			button.classList.toggle('active');
+			acordeones_conten[index].style.maxHeight = 0;
+            
         } else {
-            acordeonContenido.style.maxHeight = 0;
+			
+			acordeones_titulo.forEach(n => {n.classList.remove('active')});
+			acordeones_conten.forEach(n => {n.style.maxHeight = 0;});
+			button.classList.toggle('active');
+            acordeones_conten[index].style.maxHeight = acordeones_conten[index].scrollHeight + 'px';
         }
     });
 });
